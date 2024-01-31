@@ -12,7 +12,7 @@ summarizer = pipeline('summarization')
 API_URL = "https://api-inference.huggingface.co/models/openai/whisper-large"
 headers = {"Authorization": "Bearer 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"}
 
-@app.route('/')
+@app.route('/hello')
 def hello():
     return "Hello, World!"
 
