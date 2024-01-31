@@ -12,6 +12,10 @@ summarizer = pipeline('summarization')
 API_URL = "https://api-inference.huggingface.co/models/openai/whisper-large"
 headers = {"Authorization": "Bearer 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"}
 
+@app.route('/')
+def hello():
+    return "Hello, World!"
+
 @app.route('/process_audio', methods=['POST'])
 def process_audio():
     try:
