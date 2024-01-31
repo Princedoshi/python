@@ -52,36 +52,5 @@ def summarize_text(article):
         print("hi")
         return jsonify({'error': str(e)})
     
-
-
-
-# if _name_ == '_main_':
-#     app.run(debug=True)
-
-# def recognize_audio(audio_data):
-    # try:
-    #     # Convert the audio data to an AudioSegment
-    #     audio_segment = AudioSegment.from_file(io.BytesIO(audio_data))
-
-    #     # Split the audio into smaller segments (adjust as needed)
-    #     segment_duration = 10 * 1000  # 10 seconds
-    #     segments = [audio_segment[i:i + segment_duration] for i in range(0, len(audio_segment), segment_duration)]
-
-    #     # Initialize an empty string to store the recognized text
-    #     audio_text = ""
-
-    #     # Recognize speech in each segment using pocketsphinx
-    #     for segment in segments:
-    #         with io.BytesIO(segment.raw_data) as audio_file:
-    #             recognizer = AudioFile()
-    #             recognizer.decode_raw(audio_file)
-    #             text = recognizer.hypothesis()
-    #             audio_text += text + " "
-
-    #     return audio_text.strip()
-
-    # except Exception as e:
-    #     raise e
-
 if __name__ == '__main__':
     app.run(debug=True)
