@@ -12,7 +12,7 @@ summarizer = pipeline('summarization')
 API_URL = "https://api-inference.huggingface.co/models/openai/whisper-large"
 headers = {"Authorization": "Bearer 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"}
 
-@app.route('/hello')
+@app.route('/')
 def hello():
     return "Hello, World!"
 
@@ -56,5 +56,3 @@ def summarize_text(article):
         print("hi")
         return jsonify({'error': str(e)})
     
-if __name__ == '__main__':
-    app.run(debug=True)
