@@ -1,10 +1,9 @@
 from flask import Flask, request, jsonify
 from pydub import AudioSegment
-import io
+
 from pocketsphinx import AudioFile
 import requests
 from transformers import pipeline
-import cv2
 
 app = Flask(__name__)
 summarizer = pipeline('summarization')
